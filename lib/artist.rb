@@ -20,7 +20,7 @@ class Artist
   end
   
   def self.destroy_all
-    @@all = []
+    self.all.clear
   end
   
   def save
