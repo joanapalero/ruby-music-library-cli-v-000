@@ -25,5 +25,17 @@ class Artist
     self.new(name).tap {|artist| artist.save }
   end
   
+  def songs
+    @songs
+  end
   
+  def add_song(song)
+    song.artist = self unless song.artist == self
+    @songs << song unless @songs.include?(song)
+  end
+  
+  def genres 
+    songs.map {|song| song.genre }.uniq 
+  end
+end
     
