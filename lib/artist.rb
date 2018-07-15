@@ -11,6 +11,10 @@ class Artist
     @songs = []
   end
   
+  def songs
+    @songs
+  end
+  
   def self.all
     @@all
   end
@@ -26,10 +30,6 @@ class Artist
   
   def self.create(name)
     self.new(name).save
-  end
-  
-  def songs
-    @songs
   end
   
   def add_song(song)
