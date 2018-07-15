@@ -24,4 +24,9 @@ class Song
     self.new(name, artist, genre).tap{|song| song.save}
   end
   
+  def artist=(artist)
+    @artist = artist
+    @artist.add_song(self)
+  end
+  
   
