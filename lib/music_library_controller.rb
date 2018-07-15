@@ -88,8 +88,6 @@ def play_song
   if input.between?(1, Song.all.length)
        song = Song.all.sort_by(&:name)[input - 1]
       puts "Playing #{song.name} by #{song.artist.name}" if song
+    end
   end
-end
-  
-  
 end
