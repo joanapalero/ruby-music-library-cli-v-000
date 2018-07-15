@@ -17,5 +17,13 @@ class Artist
     @@all.clear
   end
   
+  def save
+    self.class.all << self
+  end
+  
+  def self.create(name)
+    self.new(name).tap {|artist| artist.save }
+  end
+  
   
     
