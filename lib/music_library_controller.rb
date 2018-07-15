@@ -39,4 +39,6 @@ class MusicLibraryController
     end
   end
   
-  
+  def list_artists
+    Artist.all.sort_by! {|artist| artist.name }.uniq.each_with_index do |artist, index|
+      puts "#"
